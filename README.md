@@ -17,6 +17,13 @@ A set of ArcGIS Pro Python Script Tools to estimate the amount of on-street park
 1. There are 6 tools that are meant to be run in succession. Tool 3 - Remove Segments with Metered Parking can be run once per metered parking dataset.
 2. <b>All outputs are derived</b>. Therefore, if you run a tool multiple times, it will overwrite previous tool outputs. Copy outputs if you need to save them.
 3. The py scripts are imported into the toolbox to make distribution easier. You can right-click a tool, choose edit, and make changes
+4. The source code is also included. The sequence in which tools are run is:
+     1. OnStreetPkgEst_PrepareData.py - Initial steps to Prepare Data for the analysis
+     2. GenerateIntersectionBuffers.py - Adds Intersection count information to output data
+     3. metered parking.py - Remove Segments with Metered Parking
+     4. BikeAndPedPlan.py - Add Bike and Ped Plan Info
+     5. CalcStallsPerStreet.py - Calculate Parking Stalls Per Street
+     6. SharePrep.py - Prepare to Share
 
 ### How to use
 1. Download the tbx
